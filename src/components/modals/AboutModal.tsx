@@ -18,7 +18,11 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
         >
           This is an open source clone of the game Wordle adapted to
           {CONFIG.language} by
-          <a href={CONFIG.authorWebsite} className="underline font-bold">
+          <a
+            href={CONFIG.authorWebsite}
+            className="underline font-bold"
+            target="blank"
+          >
             {CONFIG.author}
           </a>{' '}
         </Trans>
@@ -27,6 +31,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
           <a
             href="https://github.com/hannahcode/wordle"
             className="underline font-bold"
+            target="blank"
           >
             the original code
           </a>
@@ -34,6 +39,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
           <a
             href="https://www.hannahmariepark.com/"
             className="underline font-bold"
+            target="blank"
           >
             Hannah Park
           </a>
@@ -41,6 +47,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
           <a
             href="https://github.com/roedoejet/AnyLanguage-Wordle"
             className="underline font-bold"
+            target="blank"
           >
             Aidan Pine's fork
           </a>
@@ -51,18 +58,16 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
           values={{ wordListSource: CONFIG.wordListSource }}
         >
           The words for this game were sourced from
-          <a href={CONFIG.wordListSourceLink} className="underline font-bold">
-            {CONFIG.wordListSource}
-          </a>
-          .
+          {CONFIG.wordListSource}.
         </Trans>
         <Trans i18nKey="aboutOriginalSentence">
           You can also
           <a
-            href="https://www.powerlanguage.co.uk/wordle/"
+            href="https://www.nytimes.com/games/wordle/index.html"
             className="underline font-bold"
+            target="blank"
           >
-            play the original here
+            play the original at the NYTimes wordle website.
           </a>
         </Trans>
       </p>
